@@ -184,7 +184,7 @@ function infinityScroll () {
         carousel.scrollLeft = Math.round(carousel.scrollWidth - carousel.offsetWidth)
         carousel.classList.remove('no-transition')
         // carousel.classList.remove('no-iteration')
-    } else if (Math.round(carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth)) {
+    } else if (Math.ceil(carousel.scrollLeft)===carousel.scrollWidth - carousel.offsetWidth) {
         carousel.classList.add('no-transition')
         carousel.scrollLeft = carousel.offsetWidth
         carousel.classList.remove('no-transition')
